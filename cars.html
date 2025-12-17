@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinker - Modern Car Shopping</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <script src="cars.js"></script>
+</head>
+
+<body id="cars_body">
+  <section>
+    <nav>
+      <div class="nav_container">
+        <img class="logo" src="./assets/Blue_and_Black_Minimalist_Brand_Logo__1_-removebg-preview.png" alt="" />
+         <ul class="nav_links">
+            <li><a href="#" class="nav_link">Home</a></li>
+            <li><a href="#" class="nav_link">Contact</a></li>
+            <li><a href="#" class="nav_link nav_link--primary">Browse Cars</a></li>
+          </ul>
+          <button class="btn_menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu_backdrop" style="visibility: hidden">
+            <button class="btn_menu btn_menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu_links">
+              <li class="menu_list">
+                <a href="#" class="menu_link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu_list">
+                <a href="#features" class="menu_link" onclick="closeMenu()"
+                  >Find Your Car</a
+                >
+              </li>
+              <li class="menu_list">
+                <a class="menu_link no-cursor" onclick="closeMenu()"
+                  >Contact</a>
+              </li>
+            </ul>
+             <div class="header_search">
+              <p class="header_search--text">
+                Get Started on Searching For Your Car.
+              </p>
+              <div class="header_search--form">
+                <input
+                  type="search"
+                  class="header_search--input"
+                  placeholder="Search by Model, Make, or Keyword"
+                />
+                <button class="header_search--btn">Browse</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <main id="cars_main">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="cars_header">
+              <h2 class="section_title cars_header--title">
+                All <span class="purple">Cars</span>
+              </h2>
+              <select id="filter" onchange="filterBooks(event)">
+                <option value="" disabled selected>Sort</option>
+                <option value="LOW_TO_HIGH">Price, Low to High</option>
+                <option value="HIGH_TO_LOW">Price, High to Low</option>
+                <option value="RATING">Rating</option>
+              </select>
+            </div>
+            <div class="cars">
+              <i class="fas fa-spinner books_loading--spinner"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="row row_column">
+            <a href="#">
+              <figure class="footer_logo">
+                <img src="./assets/Blue_and_Black_Minimalist_Brand_Logo__2_-removebg-preview.png" class="footer_logo--img" alt="" />
+              </figure>
+            </a>
+            <div class="footer_list">
+              <a href="" class="footer_link">Home</a>
+              <a href="" class="footer_link no-cursor">About</a>
+              <a href="" class="footer_link">Browse Cars</a>
+              <a href="" class="footer_link no-cursor">Contact</a>
+            </div>
+            <div class="footer_copyright">Copyright © 2025 Blinker - Modern Car Shopping</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+       
