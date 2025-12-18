@@ -23,6 +23,27 @@
             <li><a href="#pricing" class="nav_link">Pricing</a></li>
             <li><a href="#" class="nav_link nav_link--primary">Find Your Car</a></li>
           </ul>
+          <button class="btn_menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu_backdrop">
+            <button class="btn_menu btn_menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu_links">
+              <li class="menu_list">
+                <a href="#" class="menu_link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu_list">
+                <a href="#features" class="menu_link" onclick="closeMenu()"
+                  >Browse Cars</a
+                >
+              </li>
+              <li class="menu_list">
+                <a class="menu_link no-cursor" onclick="closeMenu()">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
