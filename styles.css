@@ -925,9 +925,9 @@ select {
         top: 50%;
         transform: translateY(-50%);
         padding: 14px 36px;
-        background: #5ce1e6;
+        background: linear-gradient(135deg, #8c52ff 0%, #5ce1e6 100%);
+        border: none;
         color: white;
-        border: 2px solid white;
         border-radius: 50px;
         font-weight: 700;
         cursor: pointer;
@@ -955,11 +955,15 @@ select {
 
       .cars_header--title {
         margin-bottom: 0;
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        
       }
 
       #filter {
-        padding: 12px 24px;
-        border: 2px solid #e5e7eb;
+        padding: 18px 24px;
+        border: 2px solid #8c52ff;
         border-radius: 50px;
         font-size: 16px;
         font-weight: 600;
@@ -968,10 +972,13 @@ select {
         cursor: pointer;
         background: white;
         transition: all 0.3s;
+        display: flex;
+        width: 5000px;
+        
       }
 
       #filter:hover {
-        border-color: #5271ff;
+        border-color: #5ce1e6;
       }
 
       /* Cars Grid */
@@ -980,6 +987,8 @@ select {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 32px;
         width: 100%;
+        margin-bottom: 125px;
+        padding: 16px;
       }
 
       .car {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blinker - Modern Car Shopping</title>
+    <link rel="icon" type="image/x-icon" href="./assets/Blue_and_Black_Minimalist_Brand_Logo__5_-removebg-preview.png"/>
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
@@ -13,39 +14,18 @@
     <script src="cars.js"></script>
 </head>
 
-<body id="cars_body">
-  <section>
-    <nav>
-      <div class="nav_container">
-        <img class="logo" src="./assets/Blue_and_Black_Minimalist_Brand_Logo__1_-removebg-preview.png" alt="" />
-         <ul class="nav_links">
-            <li><a href="#" class="nav_link">Home</a></li>
-            <li><a href="#" class="nav_link">Contact</a></li>
-            <li><a href="#" class="nav_link nav_link--primary">Browse Cars</a></li>
+<section id="landing">
+      <nav>
+        <div class="nav_container">
+          <div class="nav_logo">
+            <img src="./assets/Blue_and_Black_Minimalist_Brand_Logo__1_-removebg-preview.png" alt="Blinker" />
+          </div>
+          <ul class="nav_links">
+            <li><a href="#features" class="nav_link">Features</a></li>
+            <li><a href="#steps" class="nav_link">How It Works</a></li>
+            <li><a href="#pricing" class="nav_link">Pricing</a></li>
+            <li><a href="#" class="nav_link nav_link--primary">Find Your Car</a></li>
           </ul>
-          <button class="btn_menu" onclick="openMenu()">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="menu_backdrop" style="visibility: hidden">
-            <button class="btn_menu btn_menu--close" onclick="closeMenu()">
-              <i class="fas fa-times"></i>
-            </button>
-            <ul class="menu_links">
-              <li class="menu_list">
-                <a href="#" class="menu_link" onclick="closeMenu()">Home</a>
-              </li>
-              <li class="menu_list">
-                <a href="#features" class="menu_link" onclick="closeMenu()"
-                  >Find Your Car</a
-                >
-              </li>
-              <li class="menu_list">
-                <a class="menu_link no-cursor" onclick="closeMenu()"
-                  >Contact</a>
-              </li>
-            </ul>
-          </div>
-          </div>
         </div>
       </nav>
       <div class="header_search">
@@ -71,7 +51,7 @@
               <h2 class="section_title cars_header--title">
                 All <span class="purple">Cars</span>
               </h2>
-              <select id="filter" onchange="filterBooks(event)">
+              <select id="filter" onchange="filterCars(event)">
                 <option value="" disabled selected>Sort</option>
                 <option value="LOW_TO_HIGH">Price, Low to High</option>
                 <option value="HIGH_TO_LOW">Price, High to Low</option>
@@ -86,27 +66,211 @@
       </section>
     </main>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="row row_column">
-            <a href="#">
-              <figure class="footer_logo">
-                <img src="./assets/Blue_and_Black_Minimalist_Brand_Logo__2_-removebg-preview.png" class="footer_logo--img" alt="" />
-              </figure>
-            </a>
-            <div class="footer_list">
-              <a href="" class="footer_link">Home</a>
-              <a href="" class="footer_link no-cursor">About</a>
-              <a href="" class="footer_link">Browse Cars</a>
-              <a href="" class="footer_link no-cursor">Contact</a>
+    <div class="cars">
+            <!-- Sample Car 1 -->
+            <div class="car">
+              <div class="car_img--wrapper">
+                <img class="car_img" src="https://th.bing.com/th/id/OIP.zFjy16pImfvgt-m9gEY7UgHaE7?w=368&h=201&c=7&r=0&o=5&cb=ucfimg2&dpr=1.3&pid=1.7&ucfimg=1" alt="Tesla Model 3">
+              </div>
+              <div class="car_details">
+                <h3 class="car_title">Tesla Model 3</h3>
+                <p class="car_year">2023 • Electric</p>
+                <p class="car_price">$28,990</p>
+                <div class="car_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
             </div>
-            <div class="footer_copyright">Copyright © 2025 Blinker - Modern Car Shopping</div>
+
+            <!-- Sample Car 2 -->
+            <div class="car">
+              <div class="car_img--wrapper">
+                <img class="car_img" src="https://th.bing.com/th/id/OIP.9zG2sXGdahcukvS_iKbGOQHaEK?w=304&h=180&c=7&r=0&o=5&cb=ucfimg2&dpr=1.3&pid=1.7&ucfimg=1" alt="BMW M4">
+              </div>
+              <div class="car_details">
+                <h3 class="car_title">BMW M4</h3>
+                <p class="car_year">2024 • Performance</p>
+                <p class="car_price">$76,900</p>
+                <div class="car_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sample Car 3 -->
+            <div class="car">
+              <div class="car_img--wrapper">
+                <img class="car_img" src="https://th.bing.com/th/id/OIP.UCV9D7SrhOPcWUNekAU28gHaEK?w=286&h=180&c=7&r=0&o=5&cb=ucfimg2&dpr=1.3&pid=1.7&ucfimg=1" alt="Ford Mustang">
+              </div>
+              <div class="car_details">
+                <h3 class="car_title">Ford Mustang GT</h3>
+                <p class="car_year">2024 • Muscle</p>
+                <p class="car_price">$49,900</p>
+                <div class="car_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sample Car 4 -->
+            <div class="car">
+              <div class="car_img--wrapper">
+                <img class="car_img" src="https://www.autotrader.com/wp-content/uploads/2023/10/2024-mercedes-c-class-left-3qtr.jpg?quality=75&strip=all" alt="Mercedes-Benz">
+              </div>
+              <div class="car_details">
+                <h3 class="car_title">Mercedes-Benz C-Class</h3>
+                <p class="car_year">2024 • Luxury</p>
+                <p class="car_price">$46,950</p>                    
+                <div class="car_rating">
+                  <i class="fas fa-star"></i>                                                                                                                                                                                                                                                       
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sample Car 5 -->
+            <div class="car">
+              <div class="car_img--wrapper">
+                <img class="car_img" src="https://th.bing.com/th/id/OIP.SLd0BuGnMrLE3Llmmk7LfwHaEK?w=320&h=180&c=7&r=0&o=5&cb=ucfimg2&dpr=1.3&pid=1.7&ucfimg=1" alt="Porsche 911">                                                                                                                                                                         
+              </div>
+              <div class="car_details">
+                <h3 class="car_title">Porsche 911 Carrera</h3>
+                <p class="car_year">2024 • Sports</p>
+                <p class="car_price">$184,999</p>
+                <div class="car_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sample Car 6 -->
+            <div class="car">
+              <div class="car_img--wrapper">
+                <img class="car_img" src="https://en.arabgt.com/wp-content/uploads/2023/10/2024-Audi-A4-2.jpg" alt="Audi A4">
+              </div>
+              <div class="car_details">
+                <h3 class="car_title">Audi A4</h3>
+                <p class="car_year">2024 • Sedan</p>
+                <p class="car_price">$29,998</p>
+                <div class="car_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+   <footer>
+      <div class="container">
+        <div class="footer_row">
+          <div class="footer_columns">
+            <!-- Main Column -->
+            <div class="footer_column">
+              <div class="footer_column--title">MAIN</div>
+              <a href="#" class="footer_column--link">Blog</a>
+              <a href="#" class="footer_column--link">FAQs</a>
+              <a href="#" class="footer_column--link">Support</a>
+              <a href="#" class="footer_column--link">About Us</a>
+            </div>
+
+            <!-- Cars Column -->
+            <div class="footer_column">
+              <div class="footer_column--title">CARS</div>
+              <a href="#" class="footer_column--link">Browse All</a>
+              <a href="#" class="footer_column--link">New Arrivals</a>
+              <a href="#" class="footer_column--link">Electric Vehicles</a>
+              <a href="#" class="footer_column--link">SUVs & Trucks</a>
+            </div>
+
+            <!-- Sell Column -->
+            <div class="footer_column">
+              <div class="footer_column--title">SELL</div>
+              <a href="#" class="footer_column--link">List Your Car</a>
+              <a href="#" class="footer_column--link">Trade-In Value</a>
+              <a href="#" class="footer_column--link">Dealer Portal</a>
+              <a href="#" class="footer_column--link">Pricing</a>
+            </div>
+
+            <!-- Legal Column -->
+            <div class="footer_column">
+              <div class="footer_column--title">LEGAL</div>
+              <a href="#" class="footer_column--link">Privacy Policy</a>
+              <a href="#" class="footer_column--link">Terms of Service</a>
+              <a href="#" class="footer_column--link">Cookie Policy</a>
+              <a href="#" class="footer_column--link">Disclaimer</a>
+            </div>
+
+            <!-- Newsletter Column -->
+            <div class="footer_column">
+              <div class="footer_newsletter--title">NEWSLETTER</div>
+              <p class="footer_newsletter--text">
+                Get the latest deals and new arrivals delivered to your inbox.
+              </p>
+              <div class="footer_newsletter--form">
+                <input
+                  type="email"
+                  class="footer_newsletter--input"
+                  placeholder="Your E-mail"
+                />
+                <button class="footer_newsletter--btn">Subscribe</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer_divider"></div>
+
+          <div class="footer_bottom">
+            <div class="footer_logo">
+              <img
+                src="./assets/Blue_and_Black_Minimalist_Brand_Logo__2_-removebg-preview.png"
+                alt="Blinker"
+                class="footer_logo--img"
+              />
+            </div>
+            <div class="footer_socials">
+              <a href="#" class="footer_social-link">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer_social-link">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer_social-link">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="footer_copyright">
+              © 2025 Blinker Inc. All rights reserved.
+            </div>
           </div>
         </div>
       </div>
     </footer>
   </body>
 </html>
-
        
