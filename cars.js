@@ -207,3 +207,25 @@ function closeMenu() {
 document.addEventListener('DOMContentLoaded', function() {
   renderCars(carsData);
 });
+
+const input = document.querySelector('.header_search--input');
+const btn = document.querySelector('.header_search--btn');
+function searchCars(query) {
+    const q =String(query || '').trim().toLowerCase();
+    if (!q){
+        renderCars(carsData);
+        return;
+    } 
+    const filtered = carsData.filter(c => 
+        c.title.toLowerCase().includes(q) ||
+        c.type.toLowerCase().includes(q) ||
+        String(c.year).includes(q) 
+    );
+    renderCars(filtered);
+}
+if (btn && input) {
+   btn.addEventListener('click', () => searchCars(input.value));
+   input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') searchCars(input.value);
+   });
+}
